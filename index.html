@@ -1124,6 +1124,38 @@
             .featured-project:nth-child(even) .featured-project-links {
                 justify-content: flex-start;
             }
+
+            .scroll-down {
+                bottom: 20px;
+            }
+
+            .scroll-down svg {
+                width: 24px;
+                height: 36px;
+            }
+
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .featured-project.fade-in {
+                transition-delay: 0.2s;
+            }
+
+            .project-card.fade-in {
+                transition-delay: 0.3s;
+            }
+
+            .testimonial.fade-in {
+                transition-delay: 0.4s;
+            }
         }
 
         @media (max-width: 600px) {
@@ -1179,7 +1211,21 @@
                 margin: 0 0 20px 0;
                 width: 100%;
                 text-align: center;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
             }
+
+            .nav-links.active .nav-item {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-item:nth-child(1) { transition-delay: 0.1s; }
+            .nav-item:nth-child(2) { transition-delay: 0.2s; }
+            .nav-item:nth-child(3) { transition-delay: 0.3s; }
+            .nav-item:nth-child(4) { transition-delay: 0.4s; }
+            .nav-item:nth-child(5) { transition-delay: 0.5s; }
 
             .nav-link {
                 font-size: 18px;
@@ -1196,6 +1242,15 @@
                 margin: 20px 0 0 0;
                 width: 80%;
                 text-align: center;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+                transition-delay: 0.6s;
+            }
+
+            .nav-links.active .resume-btn {
+                opacity: 1;
+                transform: translateY(0);
             }
 
             .hamburger {
@@ -1248,6 +1303,20 @@
 
             .hero {
                 padding-top: 80px;
+            }
+
+            .scroll-down {
+                bottom: 10px;
+            }
+
+            .scroll-down span {
+                font-size: 12px;
+            }
+
+            .scroll-down svg {
+                width: 20px;
+                height: 30px;
+                margin-top: 5px;
             }
 
             .hero-greeting {
